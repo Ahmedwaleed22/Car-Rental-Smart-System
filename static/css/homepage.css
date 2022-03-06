@@ -1,0 +1,61 @@
+.pageContainer {
+  background: url("../img/background.jpeg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: calc(100vh - 120px);
+  width: 100vw;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.pageContainer .content {
+  width: 90%;
+  margin: 0 auto;
+}
+.pageContainer .filtersContainer {
+  background: rgba(0, 0, 0, 0.623);
+  margin-top: 1em;
+  padding: 3em 2em;
+}
+.pageContainer .filtersContainer form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.pageContainer .filtersContainer form .input-group {
+  display: flex;
+  flex-direction: column;
+}
+.pageContainer .filtersContainer form .input-group label {
+  margin-bottom: 10px;
+}
+.pageContainer .filtersContainer form .input-group input {
+  padding: 1em;
+  width: 200px;
+}
+.pageContainer .filtersContainer form .searchButton {
+  background: var(--primary-color);
+  padding: 0 60px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 50px;
+  outline: none;
+  border: 0;
+  align-self: flex-end;
+}
+@media screen and (max-width: 335px) {
+  .pageContainer {
+    padding-top: 30px;
+  }
+}
+@media screen and (max-width: 510px) {
+  .pageContainer .filtersContainer form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .pageContainer .filtersContainer form button {
+    margin: 2em auto 0;
+  }
+}

@@ -1,0 +1,81 @@
+body {
+  background: url("../img/matchingsBackground.jpeg") no-repeat;
+  background-size: cover;
+}
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3em;
+}
+.matchingsContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  width: 90%;
+  margin-bottom: 5em;
+  background: rgba(0, 0, 0, 0.623);
+  padding: 10px;
+  border-radius: 5px;
+}
+.matchingsContainer .carCard {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 1px solid #707070;
+  padding: 1em;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+.matchingsContainer .carCard:not(:last-child) {
+  margin-bottom: 1em;
+}
+.matchingsContainer .carCard .imageCard {
+  height: 300px;
+  width: 300px;
+  flex-shrink: 0;
+  margin-right: 3em;
+}
+.matchingsContainer .carCard .imageCard img {
+  width: 100%;
+  height: 100%;
+}
+.matchingsContainer .carCard .textCard {
+  width: calc(100% - (300px + 3em));
+}
+.matchingsContainer .carCard .textCard .chooseCarButton {
+  float: right;
+  margin-top: 1em;
+  text-decoration: none;
+  color: #fff;
+  background: var(--primary-color);
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+.matchingsContainer .carCard .textCard .carName {
+  margin-bottom: 0.7em;
+}
+.matchingsContainer .carCard .textCard ul {
+  list-style-type: none;
+}
+.matchingsContainer .carCard .textCard ul li span {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+.matchingsContainer .carCard .textCard ul li:not(:last-child) {
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 700px) {
+  .matchingsContainer .carCard {
+    justify-content: center;
+  }
+  .matchingsContainer .carCard .imageCard {
+    margin: 0 0 1em;
+    max-width: 300px;
+    width: 100%;
+  }
+  .matchingsContainer .carCard .textCard {
+    width: 100%;
+  }
+}

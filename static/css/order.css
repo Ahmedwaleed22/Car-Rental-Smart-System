@@ -1,0 +1,104 @@
+.pageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: space-around;
+  margin: 3em 0;
+}
+.pageContainer aside {
+  background: #f9f9f9;
+  width: 50%;
+  border-radius: 15px;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.pageContainer aside.detailsSide {
+  max-width: 500px;
+  width: 100%;
+}
+.pageContainer aside.detailsSide img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.pageContainer aside.detailsSide .textCard {
+  margin-top: 1em;
+  padding: 0 0 3em;
+}
+.pageContainer aside.detailsSide .textCard .carName {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.pageContainer aside.detailsSide .textCard .carOptions {
+  width: 50%;
+  margin: 0 auto;
+}
+.pageContainer aside.detailsSide .textCard .carOptions ul {
+  list-style-type: none;
+}
+.pageContainer aside.detailsSide .textCard .carOptions ul li {
+  font-size: 1em;
+}
+.pageContainer aside.detailsSide .textCard .carOptions ul li:not(:last-child) {
+  margin-bottom: 1em;
+}
+.pageContainer aside.detailsSide .textCard .carOptions ul li span {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.pageContainer aside.formSide {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+.pageContainer aside.formSide .formTitle {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin: 1em 0 2em;
+  text-align: center;
+}
+.pageContainer aside.formSide form {
+  display: flex;
+  flex-direction: column;
+}
+.pageContainer aside.formSide form input,
+select {
+  padding: 1em;
+  font-size: 1em;
+  outline: none;
+  border: 1px solid #707070;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+.pageContainer aside.formSide form .totalPrice {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+.pageContainer aside.formSide form button {
+  padding: 1em;
+  background: var(--primary-color);
+  color: #fff;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.pageContainer aside.formSide form button:hover {
+  background: #477b85;
+}
+@media screen and (max-width: 1130px) {
+  .pageContainer aside {
+    margin-bottom: 3rem;
+  }
+  .pageContainer aside.detailsSide {
+    max-width: 90%;
+  }
+  .pageContainer aside.formSide {
+    max-width: 90%;
+    width: calc(90% - 3em);
+  }
+}
